@@ -2,6 +2,7 @@ package com.BikkadIT.PhoneBookApi.Model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,17 +15,17 @@ public class Contact {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private	Integer contactId;
-	
+	@Column(name="contact_Name")
 	private	String contactName;
-	
+	@Column(name="contact_Number")
 	private	String contactNumber;
-	
+	@Column(name="contact_Email")
 	private	String contactEmail;
-	
+	@Column(name="contact_Switch")
 	private	Character activeSwitch;
-	
+	@Column(name="contact_createdDate")
 	private	LocalDate createdDate;
-	
+	@Column(name="updateDate")
 	private	LocalDate  updateDate;
 
 	public Integer getContactId() {
